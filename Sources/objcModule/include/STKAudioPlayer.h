@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_OPTIONS(NSInteger, STKAudioPlayerState)
 {
-    STKAudioPlayerStateReady,
+    STKAudioPlayerStateReady = 0,
     STKAudioPlayerStateRunning = 1,
     STKAudioPlayerStatePlaying = (1 << 1) | STKAudioPlayerStateRunning,
     STKAudioPlayerStateBuffering = (1 << 2) | STKAudioPlayerStateRunning,
