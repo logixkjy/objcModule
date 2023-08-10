@@ -1,14 +1,14 @@
 //
-//  JsonParserUtil.m
+//  JsonUtil.m
 //  
 //
 //  Created by James.2329 on 2023/08/08.
 //
 
-#import "JsonParserUtil.h"
+#import "JsonUtil.h"
 #import "SBJson5.h"
 
-@implementation JsonParserUtil
+@implementation JsonUtil
 
 + (id)jsonParser:(NSString*)str
 {
@@ -72,6 +72,16 @@
     [parser parse:data];
     
     return object;
+}
+
+
++ (id)jsonWriter:(id)param
+{
+    SBJson5Writer *writer = [[SBJson5Writer alloc] init];
+    
+    NSString *jsonString = [writer stringWithObject:param];
+    
+    return jsonString;
 }
 
 @end

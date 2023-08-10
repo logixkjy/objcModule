@@ -1,5 +1,5 @@
 //
-//  JsonParserUtil.h
+//  JsonUtil.h
 //  
 //
 //  Created by James.2329 on 2023/08/08.
@@ -9,11 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JsonParserUtil : NSObject
+@interface JsonUtil : NSObject
 
 + (id)jsonParser:(NSString*)str;
 + (id)jsonParserForPath:(NSString*)path;
 + (id)jsonParserWithData:(NSData*)data;
+
++ (id)jsonWriter:(id)param;
 
 @end
 
